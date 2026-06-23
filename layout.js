@@ -1,14 +1,25 @@
-function login() {
+// Gather interactive DOM Node Element objects
+const loginModal = document.getElementById('loginModal');
+const loginBtn = document.getElementById('loginBtn');
+const closeModal = document.getElementById('closeModal');
 
-let email = document.getElementById("email").value;
-let password = document.getElementById("password").value;
+/**
+ * Open portal management login modal framework screen overlays
+ * @param {Event} event - System interaction event tracking object
+ */
+loginBtn.addEventListener('click', function(event) {
+    event.preventDefault();
+    loginModal.style.display = 'flex';
+});
 
-if(email === "admin@gmail.com" && password === "123456"){
-    alert("Login Successful");
-    window.location.href = "dashboard.html";
-}
-else{
-    alert("Invalid Email or Password");
-}
+/**
+ * Remove view element node modal visibility fields from window
+ */
+closeModal.addEventListener('click', function() {
+    loginModal.style.display = 'none';
+});
 
-}
+/**
+ * Handle structural event parameter resets for background clicks
+ */
+window.addEventListener('click', function(event)
