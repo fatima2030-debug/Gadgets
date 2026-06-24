@@ -1,7 +1,7 @@
 /* Custom Global System Parameters definitions */
 :root {
-    --primary: #121c84;    /* Inspired by deep corporate blue */
-    --secondary: #e61919;  /* Inspired by bright marketing red */
+    --primary: #121c84;    
+    --secondary: #e61919;  
     --dark: #090d16;
     --light: #f4f6fa21;
     --accent: #ff9900;
