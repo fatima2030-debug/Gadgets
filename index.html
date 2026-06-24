@@ -1,149 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>LA GADGETS GLOBAL ENTERPRISE</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA Gadgets Global Enterprises</title>
+    <!-- Fixed absolute path linking to ensure GitHub finds your CSS instantly -->
+    <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
 
-<header>
+    <!-- Top Navigation Branding Bar -->
+    <header>
+        <nav class="nav-container">
+            <div class="logo">
+                LA GADGETS
+                <span>GLOBAL ENTERPRISES</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#store">Store Catalog</a></li>
+                <li><a href="#services">Services Overview</a></li>
+                <li><a href="#" class="btn-login" id="loginBtn">Portal Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<h1>LA GADGETS GLOBAL ENTERPRISE</h1>
-
-<p>Buy • Sell • Swap • Repair</p>
-
-<nav>
-
-<a href="#">Home</a>
-
-<a href="#products">Products</a>
-
-<a href="#services">Services</a>
-
-<a href="#login">Login</a>
-
-</nav>
-
-</header>
-
-
-<section class="hero">
-
-<h2>Your Sure Plug For All Gadgets</h2>
-
-<p>Phones • Laptops • Accessories</p>
-
-<button>Shop Now</button>
-
-</section>
-
-
-<section id="products">
-
-<h2>Featured Products</h2>
-
-<div class="products">
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800">
-
-<h3>iPhone 15 Pro Max</h3>
-
-<p>₦1,700,000</p>
-
-<button onclick="buyNow()">Buy Now</button>
-
-</div>
-
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800">
-    <h3>MacBook Pro</h3>
-    <p>₦2,100,000</p>
-    <button onclick="buyNow()">Buy Now</button>
-</div>
-
-<div class="card">
-    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800">
-    <h3>AirPods Pro</h3>
-    <p>₦180,000</p>
-    <button onclick="buyNow()">Buy Now</button>
-</div>
-
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800">
-            <h3>Samsung Galaxy S25</h3>
-            <p>₦1,450,000</p>
-            <button onclick="buyNow()">Buy Now</button>
+    <!-- Marketing Hero Header Banner -->
+    <section class="hero">
+        <h1>Your Premium Gadget Plug</h1>
+        <p>RC: 7194556 | Premium Sales, Swapping, and Repair Hub</p>
+        <div class="services-tags">
+            <span class="tag">✓ Buy & Sell</span>
+            <span class="tag">✓ Device Swapping</span>
+            <span class="tag">✓ Laptop Maintenance</span>
+            <span class="tag">✓ Phone Accessories</span>
         </div>
+    </section>
 
-</div>
+    <!-- Two-Column Desktop / One-Column Mobile Dynamic Interface Container -->
+    <main class="main-container">
+        
+        <!-- Left Side Layout Segment: E-Commerce Grid Frame -->
+        <section id="store">
+            <h2 class="section-title">Available Inventory</h2>
+            <div class="product-grid">
+                
+                <!-- Product Unit 1: iPhone -->
+                <div class="product-card">
+                    <div class="product-img">
+                    <img src="images/iphone.jpg" alt="iPhone 15 Pro Max">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Phones</span>
+                        <h3 class="product-name">iPhone 15 Pro Max</h3>
+                        <p class="product-price"></p>
+                        <button class="btn-buy" onclick="handleWhatsAppOrder('iPhone 15 Pro Max')">📱 Buy via WhatsApp</button>
+                    </div>
+                </div>
 
-</section>
+                <!-- Product Unit 2: MacBook Pro -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/macbook.jpg" alt="MacBook">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Laptops</span>
+                        <h3 class="product-name">MacBook Pro M3 (8GB/512GB)</h3>
+                        <p class="product-price"></p>
+                        <button class="btn-buy" onclick="handleWhatsAppOrder('Mac')">💻 Buy via WhatsApp</button>
+                    </div>
+                </div>
 
+                <!-- Product Unit 3: HP EliteBook -->
+                <div class="product-card">
+                    <div class="product-img">
+                    <img src="images/hp.jpg" alt="HP Laptop">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Laptops</span>
+                        <h3 class="product-name">HP EliteBook Touchscreen</h3>
+                        <p class="product-price"></p>
+                        <button class="btn-buy" onclick="handleWhatsAppOrder('HP EliteBook')">💻 Buy via WhatsApp</button>
+                    </div>
+                </div>
 
-<section id="services">
+                <!-- Product Unit 4: Dell XPS -->
+                <div class="product-card">
+                    <div class="product-img">
+                    <img src="images/dell.jpg" alt="Dell Laptop">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Laptops</span>
+                        <h3 class="product-name">Dell XPS Slim Intel Core i7</h3>
+                        <p class="product-price"></p>
+                        <button class="btn-buy" onclick="handleWhatsAppOrder('Dell XPS Slim')">💻 Buy via WhatsApp</button>
+                    </div>
+                </div>
 
-<h2>Our Services</h2>
+                <!-- Product Unit 5: Lenovo ThinkPad -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/lenovo.jpg" alt="Lenovo Laptop">
 
-<div class="service">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Laptops</span>
+                        <h3 class="product-name">Lenovo ThinkPad Carbon Edition</h3>
+                        <p class="product-price"></p>
+                        <button class="btn-buy" onclick="handleWhatsAppOrder('Lenovo ThinkPad',)">💻 Buy via WhatsApp</button>
+                    </div>
+                </div>
 
-<div>📱 Phone Sales</div>
+                <!-- Product Unit 6: ASUS ROG Gaming -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/asus.jpg" alt="ASUS Laptop">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Laptops</span>
+                        <h3 class="product-name">ASUS ROG Strix Gaming Laptop</h3>
+                        <p class="product-price"></p>
+                        <button class="btn-buy" onclick="handleWhatsAppOrder('ASUS ROG Gaming Laptop')">🎮 Buy via WhatsApp</button>
+                    </div>
+                </div>
 
-<div>💻 Laptop Sales</div>
+                <!-- Product Unit 7: Accessories -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/earbuds.jpg" alt="Wireless Earbuds">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Accessories</span>
+                        <h3 class="product-name">Wireless Bluetooth Earbuds</h3>
+                        <p class="product-price"></p>
+                        <button class="btn-buy" onclick="handleWhatsAppOrder('Wireless Earbuds')">🎧 Buy via WhatsApp</button>
+                    </div>
+                </div>
 
-<div>🎧 Accessories</div>
+            </div>
+        </section>
 
-<div>🔄 Device Swapping</div>
+        <!-- Right Side Layout Segment: Secondary Panel Sidebar -->
+        <aside class="sidebar" id="services">
+            <h2 class="section-title">Instant Desk Support</h2>
+            
+            <div class="info-block">
+                <h3> Smart Device Swapping</h3>
+                <p>Trade in your old equipment models instantly for immediate performance hardware value upgrades.</p>
+            </div>
 
-<div>🛒 Buy & Sell</div>
+            <div class="info-block">
+                <h3>🛠 Technical Repair Lab</h3>
+                <p>System structural diagnostic troubleshooting procedures managed with premium part provisions.</p>
+            </div>
 
-<div>🔧 Repairs</div>
+            <div class="info-block">
+                <h3>📞 Secure Enterprise Desk</h3>
+                <p><strong>Hotline 1:</strong> 09014585036</p>
+                <p><strong>Hotline 2:</strong> 08106039449</p>
+                <p><strong>Mail Account:</strong> lateefiv@gmail.com</p>
+            </div>
+        </aside>
+    </main>
 
-</div>
+    <!-- Overlay Component Panel View Frame Container -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2>Client Portal Access</h2>
+            <form onsubmit="submitLogin(event)">
+                <div class="form-group">
+                    <label>Registration Email Address</label>
+                    <input type="email" required placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Secret Security Password</label>
+                    <input type="password" required placeholder="••••••••">
+                </div>
+                <button type="submit" class="btn-submit">Initialize Validation</button>
+            </form>
+        </div>
+    </div>
 
-</section>
+    <footer>
+        <p>&copy; 2026 LA Gadgets Global Enterprises. All Rights Reserved.</p>
+        <p class="footer-rc">Corporate Tracking Identity No | RC: 7194556</p>
+        <p><strong>Address:</strong> Ikeja No 10, Idowu Lane, Shop 6, Lagos</p
+    </footer>
 
-
-<section id="login">
-     <h2>Customer Login</h2>
-     <form onsubmit="login(); return false;">
-
-         <input type="email" id="email" placeholder="Email Address" required>
-
-          <input type="password" id="password" placeholder="Password" required>
-
-          <button type="submit">Login</button>
-
-     </form>
-
-</section>
-
-<footer>
-
-<h3>Contact Us</h3>
-
-<p>09014585036 | 08106039449</p>
-
-<p>Email: lateefiv@gmail.com</p>
-
-<p>© LA GADGETS GLOBAL ENTERPRISE</p>
-
-</footer>
-
-<script src="script.js"></script>
-
+    <script src="./layout.js"></script>
 </body>
 </html>
